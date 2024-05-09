@@ -47,15 +47,6 @@ bot.start((ctx) => {
   });
 });
 
-bot.on("callback_query", (ctx) => {
-  const data = ctx.update.callback_query.data;
 
-  // Handle callback data for ordering items
-  if (data.startsWith("order_item")) {
-    // Extract the item number from the callback data
-    const itemNumber = data.split("_")[2];
-    ctx.reply(`You selected Order Item ${itemNumber}`);
-  }
-});
 
 bot.launch();
