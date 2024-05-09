@@ -1,15 +1,26 @@
 
 import './App.css';
-import Button from './Components/Button/Button/Button';
+import Button from './Components/Button/Button';
+import Card from './Components/Card/Card';
+import Cart from "./Components/Cart/Cart";
+import { getData } from './db/db';
+
+const foods =getData()
+
+
 
 function App() {
   return(
   <>
-    Im here  !
-    <Button title={'Test'} disable={false} type={'add'}/>
-    <Button title={'Test'} disable={false} type={'remove'}/>
-    <Button title={'Test'} disable={false} type={''}/>
-  </>
+    <h1 className='heading'>Order Foood</h1>
+
+<div className="cards__container">
+
+{foods.map((food)=>{
+  return<Card food={food} key={food.id} />
+})}
+</div>
+</>
   );
 }
 
