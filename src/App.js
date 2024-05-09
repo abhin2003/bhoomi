@@ -1,4 +1,4 @@
-import React, { useState } from 'react'; // Import useState from React
+import React, { useState, useEffect } from 'react'; // Import useState from React
 
 import './App.css';
 import Card from './Components/Card/Card';
@@ -6,8 +6,14 @@ import Cart from "./Components/Cart/Cart";
 import { getData } from './db/db';
 const foods = getData();
 
+const tele = window.Telegram.WebApp
+
 function App() {
   const [cartItems, setCartItems] = useState([]); // Now useState is defined
+
+  useEffect(()=>{
+    tele.ready();
+  })
 
   const onAdd = (food) => {
     const exist = cartItems.find((x) => x.id === food.id);
@@ -35,10 +41,15 @@ function App() {
     }
   };
 
+  const onCheckout =()=>{
+    tele.MainButton.text = "pay: :) "
+    tele.MainButton.show();
+  };
+
   return (
     <>
       <h1 className="heading">Order Food</h1>
-      <Cart cartItems={cartItems} onAdd={onAdd} onRemove={onRemove}/>
+      <Cart cartItems={cartItems} onCheckout={onCheckout}/>
       <div className="cards__container">
         {foods.map((food) => {
           return <Card food={food} key={food.id} onAdd={onAdd} onRemove={onRemove} />;
