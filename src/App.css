@@ -1,15 +1,24 @@
-body{
-  background-color: rgb(19,19,52);
-  color: #fff;
-
+body {
+  background-color: #191934; /* Adjusted background color */
+  color: #000; /* Changed text color to black */
+  font-family: Arial, sans-serif; /* Added font-family for consistency */
+  margin: 0; /* Reset default body margin */
+  padding: 0; /* Reset default body padding */
 }
 
-.cards__container{
+.cards__container {
   display: flex;
   flex-wrap: wrap;
   justify-content: center;
+  gap: 20px; /* Added gap between cards for better spacing */
+  padding: 20px; /* Added padding to create space around cards */
 }
 
-.heading{
+.heading {
   text-align: center;
+  margin-top: 20px; /* Added margin for spacing */
+  font-size: 2rem; /* Increased font size for emphasis */
+  font-weight: bold; /* Added font weight for emphasis */
+  text-transform: uppercase; /* Transformed text to uppercase for styling */
+  color: #000; /* Changed text color to black */
 }

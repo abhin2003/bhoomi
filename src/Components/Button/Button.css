@@ -1,33 +1,24 @@
 :root {
-  --primary-color: #e0c521;
-}
-
-.btn {
-  padding: 0.6rem 0.8rem;
-  font-size: 1.2rem;
-  text-align: center;
-  border: 0;
-  outline: none;
-  border-radius: 10px;
-  width: 120px;
-  margin-left: 10px;
-  box-shadow: 1px -3px 52px -5px rgba(0, 0, 0, 0.77);
-  cursor: pointer;
+  --primary-color: #000000; /* Set primary color to black */
 }
 
 .btn.add {
-  background-color: var(--primary-color);
+  background-color: var(--primary-color); /* Set background color to primary color (black) */
+  color: #ffffff; /* Text color (white) */
 }
 
 .btn.remove {
-  background-color: tomato;
+  background-color: #ffffff; /* Set background color to white for remove button */
+  color: #000000; /* Text color (black) */
 }
 
 .btn.checkout {
-  background-color: rgb(38, 121, 38);
-  width: 150px;
-  color: #fff;
-  font-size: 14px;
+  background-color: #000000; /* Set background color to black for checkout button */
+  color: #ffffff; /* Text color (white) */
+}
+
+.btn:hover {
+  transform: scale(1.02); /* Increased scale for subtle hover effect */
 }
 
 .btn:active {
@@ -35,23 +26,13 @@
 }
 
 .btn.add:hover {
-  background-color: #cab320;
-}
-
-.btn.add:active {
-  background-color: #ad9a1c;
+  background-color: #333333; /* Darker hover color for add button */
 }
 
 .btn.remove:hover {
-  background-color: rgb(209, 83, 61);
-}
-.btn.remove:active {
-  background-color: rgb(185, 73, 54);
+  background-color: #cccccc; /* Lighter hover color for remove button */
 }
 
 .btn.checkout:hover {
-  background-color: rgb(41, 141, 41);
-}
-.btn.checkout:active {
-  background-color: rgb(30, 93, 41);
+  background-color: #333333; /* Darker hover color for checkout button */
 }

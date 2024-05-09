@@ -1,7 +1,30 @@
 .cart__container {
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    margin-top: 12px;
-    margin: 5px 15px;
-  }
+  display: flex;
+  justify-content: space-between; /* Adjusted to spread items evenly */
+  align-items: center;
+  margin-top: 12px;
+  padding: 10px 15px; /* Increased padding for better spacing */
+  border: 2px solid #ccc; /* Added border for visual separation */
+  border-radius: 8px; /* Rounded corners for a softer look */
+  background-color: #fff; /* Added background color */
+  box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1); /* Added shadow for depth */
+}
+
+/* You can adjust the styles of child elements within .cart__container as needed */
+.cart__total {
+  font-weight: bold;
+}
+
+.cart__checkout-button {
+  background-color: #e0c521;
+  color: #fff;
+  border: none;
+  padding: 10px 20px;
+  border-radius: 5px;
+  cursor: pointer;
+  transition: background-color 0.3s ease;
+}
+
+.cart__checkout-button:hover {
+  background-color: #c3ab1e;
+}
