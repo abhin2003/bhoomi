@@ -1,4 +1,4 @@
-# BHOOMI (DECENTRALISED TELEGRAM CHAT BOT)
+# BHOOMI (DECENTRALISED FOOD DELIVERY TELEGRAM BOT)
 
 This project was bootstrapped with [Create React App](https://github.com/facebook/create-react-app).
 
